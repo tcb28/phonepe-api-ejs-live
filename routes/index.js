@@ -6,7 +6,6 @@
   var sha256 = require('sha256');
   var uniqid = require('uniqid');
   var cors = require('cors');
-  require("dotenv").config();
   
 
   //++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -28,7 +27,7 @@
     store.set('uuid', { tx: tx_uuid });
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++
     let normalPayLoad = {
-      "merchantId": process.env.MID,
+      "merchantId": "FINRIGHTONLINE",
       "merchantTransactionId": tx_uuid,
       "merchantUserId": "MUID123",
       "amount": 100,
@@ -40,7 +39,7 @@
         "type": "PAY_PAGE"
       }
     }
-    let saltKey = process.env.MKEY;
+    let saltKey = "f1287963-a6e1-4c35-bb14-2a0b3989d494;
     let saltIndex = 1
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++
     let bufferObj = Buffer.from(JSON.stringify(normalPayLoad), "utf8");
