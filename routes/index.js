@@ -6,11 +6,10 @@
   var sha256 = require('sha256');
   var uniqid = require('uniqid');
   var cors = require('cors')
-  const { createProxyMiddleware } = require('http-proxy-middleware');
+  
 
   //++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  router.use(cors()); 
-  app.use('/pay', createProxyMiddleware({ target: 'https://mercury-uat.phonepe.com', changeOrigin: true })); 
+  router.use(cors());  
   //++++++++++++++++++++++++++++++++++++++++++++++++++++++
   /* GET home page. */
   //++++++++++++++++++++++++++++++++++++++++++++++++++++++
