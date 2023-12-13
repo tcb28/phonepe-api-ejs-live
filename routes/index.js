@@ -8,9 +8,9 @@
   //++++++++++++++++++++++++++++++++++++++++++++++++++++++
   /* GET home page. */
   //++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  router.get('/', async function (req, res, next) {
-    res.render('index', { page_respond_data: 'Please Pay & Repond From The Payment Gateway Will Come In This Section' });
-  });
+  // router.get('/', async function (req, res, next) {
+  //   res.render('index', { page_respond_data: 'Please Pay & Repond From The Payment Gateway Will Come In This Section' });
+  // });
   //++++++++++++++++++++++++++++++++++++++++++++++++++++++
   //PAY
   //++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -59,9 +59,10 @@
       }
     }).then(function (response) {
       res.redirect(response.data.data.instrumentResponse.redirectInfo.url);
-    }).catch(function (error) {
-      res.render('index', { page_respond_data: JSON.stringify(error) });
-    });
+    })
+    // .catch(function (error) {
+    //   res.render('index', { page_respond_data: JSON.stringify(error) });
+    // });
   });
   //++++++++++++++++++++++++++++++++++++++++++++++++++++++
   //PAY RETURN
