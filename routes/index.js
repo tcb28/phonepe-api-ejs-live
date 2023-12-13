@@ -28,7 +28,7 @@ router.get('/pay', async function (req, res, next) {
     "amount": 10000,
     "redirectUrl": "http://localhost:3000/pay-return-url/",
     "redirectMode": "POST",
-    "callbackUrl": "http://localhost:3000/pay-return-url/",
+    "callbackUrl": "https://inno-genesis-phonepe.cyclic.app/",
     "mobileNumber": "9999999999",
     "paymentInstrument": {
       "type": "PAY_PAGE"
