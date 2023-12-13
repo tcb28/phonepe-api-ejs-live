@@ -26,9 +26,9 @@ router.get('/pay', async function (req, res, next) {
     "merchantTransactionId": tx_uuid,
     "merchantUserId": "MUID123",
     "amount": 10000,
-    "redirectUrl": "https://inno-genesis-phonepe.cyclic.app/",
+    "redirectUrl": "https://inno-genesis-phonepe.cyclic.app/pay-return-url/",
     "redirectMode": "POST",
-    "callbackUrl": "https://inno-genesis-phonepe.cyclic.app/",
+    "callbackUrl": "https://inno-genesis-phonepe.cyclic.app/pay-return-url/",
     "mobileNumber": "9999999999",
     "paymentInstrument": {
       "type": "PAY_PAGE"
