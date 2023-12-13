@@ -5,6 +5,10 @@
   var axios = require('axios');
   var sha256 = require('sha256');
   var uniqid = require('uniqid');
+  var cors = require('cors')
+
+  //++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  router.use(cors());  
   //++++++++++++++++++++++++++++++++++++++++++++++++++++++
   /* GET home page. */
   //++++++++++++++++++++++++++++++++++++++++++++++++++++++
