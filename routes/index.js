@@ -39,7 +39,7 @@
         "type": "PAY_PAGE"
       }
     }
-    let saltKey = "f1287963-a6e1-4c35-bb14-2a0b3989d494;
+    let saltKey = "f1287963-a6e1-4c35-bb14-2a0b3989d494";
     let saltIndex = 1
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++
     let bufferObj = Buffer.from(JSON.stringify(normalPayLoad), "utf8");
@@ -78,15 +78,15 @@
       // 1.In the live please match the amount you get byamount you send also so that hacker can't pass static value.
       // 2.Don't take Marchent ID directly validate it with yoir Marchent ID
       //++++++++++++++++++++++++++++++++++++++++++++++++++++++
-      //if (req.body.transactionId == store.get('uuid').tx && req.body.merchantId == 'PGTESTPAYUAT' && req.body.amount == 1000) {
+      //if (req.body.transactionId == store.get('uuid').tx && req.body.merchantId == 'FINRIGHTONLINE' && req.body.amount == 1000) {
       if (req.body.transactionId) {
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++
-        let saltKey = '099eb0cd-02cf-4e2a-8aca-3e6c6aff0399';
+        let saltKey ="f1287963-a6e1-4c35-bb14-2a0b3989d494";
         let saltIndex = 1
         //++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        let surl = 'https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/status/PGTESTPAYUAT/' + req.body.transactionId;
+        let surl = 'https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/status/FINRIGHTONLINE/' + req.body.transactionId;
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++
-        let string = '/pg/v1/status/PGTESTPAYUAT/' + req.body.transactionId + saltKey;
+        let string = '/pg/v1/status/FINRIGHTONLINE/' + req.body.transactionId + saltKey;
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++
         let sha256_val = sha256(string);
         let checksum = sha256_val + '###' + saltIndex;
